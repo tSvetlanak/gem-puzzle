@@ -1,0 +1,31 @@
+function createEl(el, parent, naimClass) {
+    el = document.createElement(el);
+    parent.append(el);
+    el.classList.add(naimClass);
+    return el;
+}
+export const listItem = document.querySelectorAll('.menu-list__item');
+export const listItemImage = document.querySelector('.menu-list__item-text');
+const countStepTime = createEl('div', document.body, 'countStepTime');
+export const countStep = createEl('div', countStepTime, 'countStep');
+export const pTime = createEl('div', countStepTime, 'p-time');
+pTime.innerHTML = 'Время: 00:00:00';
+const settings = createEl('div', document.body, 'settings');
+export const btnStart = createEl('button', settings, 'btns');
+btnStart.innerHTML = '<img src="assets/start.png" title="Старт">';
+export const btnSound = createEl('button', settings, 'btns');
+btnSound.innerHTML = '<img src="assets/nosound.png" title="Без звука">';
+export const btnSleepping = createEl('button', settings, 'btns');
+btnSleepping.innerHTML = '<img src="assets/34coffee.png" title="Пауза">';
+btnSleepping.classList.add('noSleepping');
+export const btnList = createEl('button', settings, 'btns');
+btnList.innerHTML = '<img src="assets/list.png" title="Лучшие результаты">';
+export const btnSave = createEl('button', settings, 'btns');
+btnSave.innerHTML = '<img src="assets/save1.png" title="Сохранить игру">';
+export const btnLoad = createEl('button', settings, 'btns');
+btnLoad.innerHTML = '<img src="assets/load.png" title="Загрузить игру">';
+export let field = createEl('div', document.body, 'field');
+export let imgName = createEl('div', document.body, 'imgName');
+export const ulImage = createEl('ul', document.body, 'ulImage');
+export const succes = createEl('div', document.body, 'succes');
+export const result = createEl('div', document.body, 'showResult');
